@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic — The Ultimate Desktop AI Assistant</title>
+    <meta name="description"
+        content="Agentic is a powerful, local-first desktop AI assistant with 70+ tools, long-term memory, and a stunning futuristic UI.">
+    <link rel="icon" type="image/png" href="agentic.png">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Lobster&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav>
+        <div class="logo">
+            <img src="agentic.png" alt="Agentic Logo" width="32" height="32">
+            Agentic<span>.</span>
+        </div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#tools">Tools</a>
+            <a href="#releases">Releases</a>
+            <a href="#docs">Docs</a>
+            <a href="#faq">FAQ</a>
+            <a href="#architecture">Architecture</a>
+            <a href="https://github.com/Ghua8088/Agentic_release" target="_blank">Repository</a>
+        </div>
+        <a href="https://github.com/Ghua8088/Agentic_release/releases" class="download-btn"
+            id="nav-download-btn">Download...</a>
+    </nav>
+
+    <header class="hero">
+        <h1>Autonomous Intelligence.<br>Integrated in Desktop.</h1>
+        <p>Agentic combines state-of-the-art LLM reasoning with deep system integration, 70+ tools, and a premium
+            glassmorphic interface.</p>
+        <div style="display: flex; gap: 1rem;">
+            <a href="https://github.com/Ghua8088/Agentic_release/releases" class="download-btn" id="hero-download-btn"
+                style="padding: 1rem 2.5rem; font-size: 1.1rem;">Get Started</a>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-value">70+</span>
+                <span class="stat-label">Built-in Tools</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">100%</span>
+                <span class="stat-label">Privacy First</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">∞</span>
+                <span class="stat-label">Extensible</span>
+            </div>
+        </div>
+
+        <div class="hero-ui-preview">
+            <img src="agentic-splash.png" alt="Agentic UI Preview">
+        </div>
+    </header>
+
+    <section id="features" class="features">
+        <div class="section-title">
+            <h2>Infinite Capabilities</h2>
+            <p style="color: var(--text-secondary);">Everything you need to automate your local and web workflows.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i data-lucide="brain"></i></div>
+                <h3>Agentic Reasoning</h3>
+                <p>Recursive reasoning engine with depth-level control. Plan, execute, and reflect on complex multi-step
+                    tasks autonomously.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i data-lucide="wrench"></i></div>
+                <h3>70+ Native Tools</h3>
+                <p>Built-in tools for file system, web automation, GitHub, sandboxed Python, media processing, and
+                    multimodal workflows.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i data-lucide="database"></i></div>
+                <h3>Long-Term Memory</h3>
+                <p>Local vector storage (RAG) using FAISS. The agent remembers your projects, preferences, and past
+                    interactions securely.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i data-lucide="layout"></i></div>
+                <h3>Artifact Panel</h3>
+                <p>A dedicated side-panel for viewing generated code, rendering live previews, and exploring interactive
+                    data visualizations.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i data-lucide="layers"></i></div>
+                <h3>MCP First-Class</h3>
+                <p>Full support for Model Context Protocol. Connect to any MCP server to expand the assistant's
+                    capabilities infinitely.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i data-lucide="box"></i></div>
+                <h3>Plugin System</h3>
+                <p>Easily extend the assistant by dropping Python scripts into the plugins directory. Automatically
+                    detected at runtime.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools" class="tools" style="padding: 100px 10%; background: rgba(0, 242, 255, 0.02);">
+        <div class="section-title">
+            <h2>The Toolbelt of the Future</h2>
+            <p style="color: var(--text-secondary);">Browse some of the 70+ tools available natively in Agentic.</p>
+        </div>
+
+        <div class="tool-explorer">
+            <div class="tool-category">
+                <h4><i data-lucide="globe"></i> Web & Search</h4>
+                <ul>
+                    <li>Playwright Dynamic Scraper</li>
+                    <li>Wikipedia Deep Search</li>
+                    <li>Google/DuckDuckGo Search</li>
+                    <li>Full Article Fetch & Markdown</li>
+                    <li>YouTube Transcript Extractor</li>
+                </ul>
+            </div>
+            <div class="tool-category">
+                <h4><i data-lucide="code"></i> Developer Pack</h4>
+                <ul>
+                    <li>Sandboxed Python Runtime</li>
+                    <li>Git & GitHub Integration</li>
+                    <li>Mermaid Diagram Renderer</li>
+                    <li>Linting & Testing Suite</li>
+                    <li>Project Structure Scanner</li>
+                </ul>
+            </div>
+            <div class="tool-category">
+                <h4><i data-lucide="file-text"></i> Processing</h4>
+                <ul>
+                    <li>Multimodal Document Vision</li>
+                    <li>PDF/Docx Text Extraction</li>
+                    <li>Local Vector Memory (RAG)</li>
+                    <li>Image Generation & Vision</li>
+                    <li>Audio STT & TTS</li>
+                </ul>
+            </div>
+            <div class="tool-category">
+                <h4><i data-lucide="terminal"></i> System Mastery</h4>
+                <ul>
+                    <li>Process & Resource Mgmt</li>
+                    <li>Keyring Secure Storage</li>
+                    <li>Clipboard Automation</li>
+                    <li>System Notifications</li>
+                    <li>Native File Management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="releases" class="releases" style="padding: 100px 10%;">
+        <div class="section-title">
+            <h2>Latest Releases</h2>
+            <p id="release-status" style="color: var(--text-secondary);">Fetching latest updates...</p>
+        </div>
+        <div id="release-container" class="release-container">
+            <!-- Release notes injected here -->
+        </div>
+    </section>
+
+    <section id="docs" class="docs" style="padding: 100px 10%; background: rgba(255,255,255,0.01);">
+        <div class="section-title">
+            <h2>User Guide & Documentation</h2>
+            <p style="color: var(--text-secondary);">Everything you need to master Agentic.</p>
+        </div>
+
+        <div class="docs-wrapper">
+            <aside class="docs-sidebar">
+                <a href="#setup" class="docs-nav-link">Getting Started</a>
+                <a href="#settings" class="docs-nav-link">Settings & Themes</a>
+                <a href="#models" class="docs-nav-link">Model Management</a>
+                <a href="#plugins" class="docs-nav-link">Custom Plugins</a>
+                <a href="#modes" class="docs-nav-link">Modes & Commands</a>
+            </aside>
+
+            <main class="docs-content">
+                <div id="setup" class="doc-block">
+                    <h3><i data-lucide="rocket"></i> Quick Start</h3>
+                    <div class="doc-card">
+                        <h4>Getting a Gemini API Key</h4>
+                        <p>To use Google's powerful cloud models:</p>
+                        <ol>
+                            <li>Go to the <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI
+                                    Studio</a>.</li>
+                            <li>Sign in and click <strong>"Create API key"</strong>.</li>
+                            <li>In Agentic, go to <strong>Settings -> System -> Google Gemini API</strong> and paste
+                                your key.</li>
+                        </ol>
+                    </div>
+
+                    <div class="doc-card">
+                        <h4>Installing Ollama (Local Models)</h4>
+                        <ol>
+                            <li>Download from <a href="https://ollama.com/" target="_blank">ollama.com</a>.</li>
+                            <li>Run the installer and ensure the icon appears in your tray.</li>
+                            <li>Pull models via terminal (<code>ollama run llama3</code>) or in <strong>Settings ->
+                                    System</strong>.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="settings" class="doc-block">
+                    <h3><i data-lucide="settings"></i> App Customization</h3>
+                    <div class="doc-card">
+                        <h4>Settings & Notifications</h4>
+                        <p>Press <code>Ctrl + ,</code> to open settings. You can manage notifications, default models,
+                            and tool permissions here.</p>
+                    </div>
+                    <div class="doc-card">
+                        <h4>Theme & Colors</h4>
+                        <p>In <strong>Settings -> General</strong>, use the circular picker to change your
+                            <strong>Primary Accent Color</strong>. Click Save to see the glow update instantly.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="plugins" class="doc-block">
+                    <h3><i data-lucide="plug"></i> Custom Plugins</h3>
+                    <div class="doc-card">
+                        <h4>How to add Plugins</h4>
+                        <p>Agentic is highly extensible. You can add your own Python tools by dropping them into the
+                            plugins folder.</p>
+                        <div class="info-box">
+                            <strong>Plugin Directory:</strong><br>
+                            <code>%APPDATA%/Agentic/plugins</code> (Windows)<br>
+                            <code>~/Library/Application Support/Agentic/plugins</code> (macOS)
+                        </div>
+
+                        <h5 style="color: var(--accent-color); margin: 1.5rem 0 0.5rem;">Stricter Gemini Integration
+                        </h5>
+                        <p>To support stricter tool-calling rules (especially for Gemini), use the
+                            <code>@register_tool</code> decorator and <strong>Pydantic</strong> models for input
+                            validation.
+                        </p>
+
+                        <div class="code-example"
+                            style="background: rgba(0,0,0,0.3); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; font-family: 'Fira Code', monospace; font-size: 0.85rem; border: 1px solid var(--border-color); line-height: 1.5;">
+                            <span style="color: #6a9955;"># plugin_file.py</span><br>
+                            <span style="color: #c586c0;">from</span> pydantic <span
+                                style="color: #c586c0;">import</span> BaseModel, Field<br>
+                            <span style="color: #c586c0;">from</span> pytron.tools <span
+                                style="color: #c586c0;">import</span> register_tool<br><br>
+
+                            <span style="color: #c586c0;">class</span> <span
+                                style="color: #4ec9b0;">MyInput</span>(BaseModel):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;topic: <span style="color: #4ec9b0;">str</span> = Field(...,
+                            description=<span style="color: #ce9178;">"Topic to analyze"</span>)<br><br>
+
+                            <span style="color: #d16969;">@register_tool</span>(description=<span
+                                style="color: #ce9178;">"Analyzes a specific topic using local tools"</span>)<br>
+                            <span style="color: #c586c0;">def</span> <span
+                                style="color: #dcdcaa;">analyze_topic</span>(data: MyInput):<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #c586c0;">return</span> {<span
+                                style="color: #ce9178;">"status"</span>: <span style="color: #ce9178;">"Success"</span>,
+                            <span style="color: #ce9178;">"data"</span>: f<span style="color: #ce9178;">"Analyzed
+                                {data.topic}"</span>}
+                        </div>
+
+                        <div class="warning-box"
+                            style="background: rgba(255, 69, 58, 0.05); border: 1px solid rgba(255, 69, 58, 0.2); border-left: 4px solid #ff453a; padding: 1.5rem; border-radius: 12px; margin-top: 2rem;">
+                            <strong style="color: #ff453a; display: flex; align-items: center; gap: 0.5rem;">
+                                <i data-lucide="alert-triangle"></i> Security & Responsibility
+                            </strong>
+                            <p
+                                style="font-size: 0.85rem; margin-top: 0.75rem; color: var(--text-secondary); line-height: 1.6;">
+                                <strong>Virus Warning:</strong> Adding custom scripts involves executing code on your
+                                machine. <strong>Never</strong> add plugins from sources you don't trust, as they could
+                                contain malicious code or viruses.<br><br>
+                                <strong>Disclaimer:</strong> We are <strong>NOT responsible</strong> for any system
+                                damage, data loss, or security breaches caused by third-party plugins. Users install and
+                                run custom code at their own risk.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modes" class="doc-block">
+                    <h3><i data-lucide="command"></i> Modes & Commands</h3>
+                    <div class="modes-grid">
+                        <div class="mode-tag"><code>@web</code> Internet Search</div>
+                        <div class="mode-tag"><code>@code</code> Coding Assistant</div>
+                        <div class="mode-tag"><code>@reasoning</code> Multi-step Planning</div>
+                        <div class="mode-tag"><code>@file</code> Local File Analysis</div>
+                    </div>
+                    <p style="margin-top: 2rem;">Common commands: <code>/clear</code>, <code>/reset</code>,
+                        <code>/history</code>, <code>/help</code>.
+                    </p>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <section id="faq" class="faq" style="padding: 100px 10%;">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-grid">
+            <div class="doc-card">
+                <h4>Is my data private?</h4>
+                <p>Yes. Agentic is local-first. All vector memory, file scans, and local model interactions never leave
+                    your machine.</p>
+            </div>
+            <div class="doc-card">
+                <h4>Do I need a GPU?</h4>
+                <p>For local models (Ollama), a GPU is recommended for speed. However, cloud models like Gemini require
+                    zero local hardware power.</p>
+            </div>
+            <div class="doc-card">
+                <h4>Can I add my own tools?</h4>
+                <p>Absolutely. Use our Python Plugin SDK to add any capability in minutes. See the Docs section for
+                    details.</p>
+            </div>
+            <div class="doc-card">
+                <h4>Is it free?</h4>
+                <p>Agentic's core framework and interface are completely free and open-source.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture" style="padding: 100px 10%; background: rgba(255,255,255,0.01);">
+        <div class="section-title">
+            <h2>Modern Architecture</h2>
+            <p style="color: var(--text-secondary);">Built on the powerful Pytron framework for zero-config bridge
+                between Python and React.</p>
+        </div>
+
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 4rem; text-align: left;">
+            <div>
+                <h4
+                    style="color: var(--accent-color); margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+                    Frontend</h4>
+                <p style="font-size: 0.95rem;">React 18+, Vite, and Lucide Icons. High-performance SPA with
+                    glassmorphism and real-time streaming updates.</p>
+            </div>
+            <div>
+                <h4
+                    style="color: var(--accent-color); margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+                    Backend</h4>
+                <p style="font-size: 0.95rem;">Python 3.10+, Pytron-Kit. Multi-agent orchestration with LangChain,
+                    Ollama, and Google Gemini integration.</p>
+            </div>
+            <div>
+                <h4
+                    style="color: var(--accent-color); margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">
+                    Memory</h4>
+                <p style="font-size: 0.95rem;">Faiss-CPU and FastEmbed for lightning-fast local RAG. Privacy-first local
+                    vector database storage.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-logo">AGENTIC<span>.</span></div>
+        <div class="footer-links">
+            <a href="https://github.com/Ghua8088/Agentic_release">GitHub</a>
+            <a href="https://github.com/Ghua8088/Agentic_release/issues">Support</a>
+            <a href="#">Security</a>
+            <a href="https://github.com/Ghua8088/Agentic_release/releases">Changelog</a>
+        </div>
+        <p class="copyright">&copy; 2025 Agentic AI. Powered by Pytron. Built for the future of work.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function getOS() {
+            const userAgent = window.navigator.userAgent;
+            const platform = window.navigator.platform;
+            const macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'];
+            const windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'];
+            const iosPlatforms = ['iPhone', 'iPad', 'iPod'];
+
+            if (macosPlatforms.indexOf(platform) !== -1) return 'macOS';
+            if (iosPlatforms.indexOf(platform) !== -1) return 'iOS';
+            if (windowsPlatforms.indexOf(platform) !== -1) return 'Windows';
+            if (/Android/.test(userAgent)) return 'Android';
+            if (/Linux/.test(platform)) return 'Linux';
+
+            return 'Unknown';
+        }
+
+        async function fetchReleases() {
+            const container = document.getElementById('release-container');
+            const status = document.getElementById('release-status');
+            const navBtn = document.getElementById('nav-download-btn');
+            const heroBtn = document.getElementById('hero-download-btn');
+            const os = getOS();
+
+            // Initial OS-based UI check (even before fetch)
+            if (os === 'Android' || os === 'iOS') {
+                navBtn.textContent = "Not Available";
+                navBtn.classList.add('disabled');
+                navBtn.href = "#";
+                heroBtn.textContent = "Not Available";
+                heroBtn.classList.add('disabled');
+                heroBtn.href = "#";
+            } else if (os !== 'Unknown') {
+                navBtn.textContent = `Download for ${os}...`;
+                heroBtn.textContent = `Get it for ${os}...`;
+            }
+
+            try {
+                const response = await fetch('https://api.github.com/repos/Ghua8088/Agentic_release/releases');
+                const releases = await response.json();
+
+                if (releases && Array.isArray(releases) && releases.length > 0) {
+                    const latest = releases[0];
+                    status.textContent = `Current Version: ${latest.tag_name}`;
+
+                    let downloadUrl = "https://github.com/Ghua8088/Agentic_release/releases";
+                    let btnText = `Download ${latest.tag_name}`;
+
+                    if (os === 'Android' || os === 'iOS') {
+                        btnText = "Not Available";
+                    } else {
+                        const assets = latest.assets || [];
+                        let matchedAsset = null;
+
+                        if (os === 'Windows') {
+                            matchedAsset = assets.find(a => a.name.endsWith('.exe') || a.name.endsWith('.msi'));
+                        } else if (os === 'macOS') {
+                            matchedAsset = assets.find(a => a.name.endsWith('.dmg') || a.name.endsWith('.pkg'));
+                        } else if (os === 'Linux') {
+                            matchedAsset = assets.find(a => a.name.endsWith('.AppImage') || a.name.endsWith('.deb') || a.name.endsWith('.rpm'));
+                        }
+
+                        if (matchedAsset) {
+                            downloadUrl = matchedAsset.browser_download_url;
+                            btnText = `Download for ${os}`;
+                        } else {
+                            btnText = `Download ${latest.tag_name}`;
+                        }
+                    }
+
+                    navBtn.textContent = btnText;
+                    navBtn.href = downloadUrl;
+                    heroBtn.textContent = btnText;
+                    heroBtn.href = downloadUrl;
+
+                    container.innerHTML = releases.slice(0, 3).map(release => `
+                        <div class="release-card">
+                            <div class="release-header">
+                                <span class="version-tag">${release.tag_name}</span>
+                                <span class="release-date">${new Date(release.published_at).toLocaleDateString()}</span>
+                            </div>
+                            <div class="release-body">
+                                ${marked.parse(release.body || 'No release notes provided.')}
+                            </div>
+                        </div>
+                    `).join('');
+                } else {
+                    status.textContent = "Status: Beta";
+                    container.innerHTML = `
+                        <div class="release-card beta-card">
+                            <div style="text-align: center; padding: 2rem;">
+                                <i data-lucide="sparkles" style="width: 48px; height: 48px; color: var(--accent-color); margin-bottom: 1rem;"></i>
+                                <h3 style="margin-bottom: 0.5rem;">Public Release Coming Soon</h3>
+                                <p style="color: var(--text-secondary);">Agentic is currently in private beta. Join our community for early access!</p>
+                            </div>
+                        </div>
+                    `;
+
+                    if (os !== 'Android' && os !== 'iOS') {
+                        navBtn.textContent = "Beta Access";
+                        heroBtn.textContent = "Beta Access";
+                    }
+                    lucide.createIcons();
+                }
+            } catch (error) {
+                console.error('Error fetching releases:', error);
+                status.textContent = "In Beta / Coming Soon";
+            }
+        }
+
+        // Add marked for markdown parsing
+        const script = document.createElement('script');
+        script.src = "https://cdn.jsdelivr.net/npm/marked/marked.min.js";
+        script.onload = fetchReleases;
+        document.head.appendChild(script);
+    </script>
+</body>
+
+</html>
