@@ -465,14 +465,18 @@
                     container.innerHTML = releases.slice(0, 3).map(release => `
                         <div class="release-card">
                             <div class="release-header">
-                                <span class="version-tag">${release.tag_name}</span>
-                                <span class="release-date">${new Date(release.published_at).toLocaleDateString()}</span>
+                                <div class="version-info">
+                                    <span class="version-tag">${release.tag_name}</span>
+                                    <span class="release-date">Released on ${new Date(release.published_at).toLocaleDateString(undefined, { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+                                </div>
+                                <a href="${release.html_url}" title="View on GitHub" target="_blank" style="color: var(--accent-color); opacity: 0.6; transition: opacity 0.3s;"><i data-lucide="github"></i></a>
                             </div>
                             <div class="release-body">
                                 ${marked.parse(release.body || 'No release notes provided.')}
                             </div>
                         </div>
                     `).join('');
+                    lucide.createIcons();
                 } else {
                     status.textContent = "Status: Beta";
                     container.innerHTML = `
